@@ -1,8 +1,8 @@
 {
     "database": {
-        "host": "",
-        "name": "",
-        "username": "",
-        "password": ""
+        "host": "localhost",
+        "name": "marketplace",
+        "username": "fireheat",
+        "password": "cdiHi5OeC0vbEtr8"
     }
 }

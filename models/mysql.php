@@ -1,7 +1,6 @@
 <?php
-    function connect()
+    function connect($path)
     {
-        $path = "config.json";
         // Read MySQL details
         $config = file_get_contents($path);
         $options = json_decode($config);
