@@ -21,7 +21,8 @@
                 <option value="18">Delhi Technological University, New Delhi</option>
 		</select>
 		<input type="submit">
-	</form><br>
+	</form>
+	<br>
     <span id="msg"></span><br>
 
 	<table style="border: 2px solid wheat;">
@@ -35,7 +36,8 @@
         		<th>Date</th>
         		<th>Contact Seller</th>
     		</tr>
-    		<?php foreach ($data as $obj): ?>
+    		<?php if(!empty($data))
+    		    foreach ($data as $obj): ?>
         		<tr>
     				<td><img width="100px" height="50px" src= <?= $obj.source; ?>></td>
     				<td><?= $obj.name; ?></td>
