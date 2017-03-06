@@ -1,4 +1,4 @@
 <?php
-    require("../includes/helpers.php");
-    render("register.html", array("title" => "Register"));
+    require("../controllers/includes/helpers.php");
+    render("v_register.html", array("title" => "Register"));
 ?>

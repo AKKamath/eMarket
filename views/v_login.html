@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <link rel=stylesheet type="text/css" href="/css/styles.css">
+		<script src="js/jquery.js"></script>
+    </head>
+    <body>
+        <div class="container">
+
+            <form id="LoginF" method="POST" action="/login.php">
+                E-mail address: <input type="email" name="email"><br>
+                Password: <input type="password" name="password"><br>
+	            <span id='msg'></span>
+            </form>
+            <button form="LoginF" type="submit">Log In</button>
+            <span>or, <a href='/register.php'>Register</a></span>
+        </div>
+    </body>
+</html>
