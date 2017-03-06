@@ -1,13 +1,13 @@
 <a href="/postad.php">Sell Item</a><br>
 <ul>
-	<li><a href="/store?">All</a></li>
-	<li><a href="/store?category=1">Books</a></li>
-	<li><a href="/store?category=2">Clothing</a></li>
-	<li><a href="/store?category=3">Electronics</a></li>
-	<li><a href="/store?category=4">Furniture</a></li>
-	<li><a href="/store?category=5">Sports</a></li>
-	<li><a href="/store?category=6">Vehicle</a></li>
-	<li><a href="/store?category=6">Others</a></li>
+	<li><a href="/store.php?">All</a></li>
+	<li><a href="/store.php?category=1">Books</a></li>
+	<li><a href="/store.php?category=2">Clothing</a></li>
+	<li><a href="/store.php?category=3">Electronics</a></li>
+	<li><a href="/store.php?category=4">Furniture</a></li>
+	<li><a href="/store.php?category=5">Sports</a></li>
+	<li><a href="/store.php?category=6">Vehicle</a></li>
+	<li><a href="/store.php?category=6">Others</a></li>
 </ul>
 <div>
 	<form>
@@ -39,7 +39,7 @@
     		<?php if(!empty($data))
     		    foreach ($data as $obj): ?>
         		<tr>
-    				<td><img width="100px" height="50px" src= <?= $obj.source; ?>></td>
+    				<td><img width="100px" height="50px" src= <?= $obj.imgsource; ?>></td>
     				<td><?= $obj.name; ?></td>
     				<td><?= $obj.price ?></td>
     				<td><?= $obj.college; ?></td>
