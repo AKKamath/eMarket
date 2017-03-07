@@ -7,7 +7,7 @@
 	<li><a href="/store.php?category=4">Furniture</a></li>
 	<li><a href="/store.php?category=5">Sports</a></li>
 	<li><a href="/store.php?category=6">Vehicle</a></li>
-	<li><a href="/store.php?category=6">Others</a></li>
+	<li><a href="/store.php?category=7">Others</a></li>
 </ul>
 <div>
 	<form>
@@ -39,13 +39,13 @@
     		<?php if(!empty($data))
     		    foreach ($data as $obj): ?>
         		<tr>
-    				<td><img width="100px" height="50px" src= <?= $obj.imgsource; ?>></td>
-    				<td><?= $obj.name; ?></td>
-    				<td><?= $obj.price ?></td>
-    				<td><?= $obj.college; ?></td>
-    				<td><?= $obj.category; ?></td>
-    				<td><?= $obj.selldate; ?></td>
-                    <td><a href= <?= $obj.seller ?>>Contact Seller</a></td>
+    				<td><img width="100px" height="50px" src= "<?php echo $obj->imgSource; ?>"></td>
+    				<td><?= $obj->name; ?></td>
+    				<td><?= $obj->price ?></td>
+    				<td><?= $obj->college; ?></td>
+    				<td><?= $obj->category; ?></td>
+    				<td><?= $obj->sellDate; ?></td>
+                    <td><a href= <?= $obj->seller ?>>Contact Seller</a></td>
     			</tr>
 			<?php endforeach ?>
 		</tbody>
