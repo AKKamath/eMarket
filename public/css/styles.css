@@ -1,6 +1,6 @@
 /**
  * styles.css
- *
+ * Welcome to any color or design suggestions!
  * Global CSS.
  */
 
@@ -22,4 +22,32 @@
 #middle
 {
     width: auto;
+}
+
+.topnavbar 
+{
+    background-color: white;
+    overflow: hidden;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+.topnavbar a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnavbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnavbar .active {
+    background-color: #4CAF50;
+    color: white;
 }

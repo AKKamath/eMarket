@@ -1,14 +1,14 @@
 <a href="/postad.php">Sell Item</a><br>
-<ul>
-	<li><a href="/store.php?">All</a></li>
-	<li><a href="/store.php?category=1">Books</a></li>
-	<li><a href="/store.php?category=2">Clothing</a></li>
-	<li><a href="/store.php?category=3">Electronics</a></li>
-	<li><a href="/store.php?category=4">Furniture</a></li>
-	<li><a href="/store.php?category=5">Sports</a></li>
-	<li><a href="/store.php?category=6">Vehicle</a></li>
-	<li><a href="/store.php?category=6">Others</a></li>
-</ul>
+<div class="topnavbar" id="navbar_store">
+	<a href="/store.php?">All</a>
+	<a href="/store.php?category=1">Books</a>
+	<a href="/store.php?category=2">Clothing</a>
+	<a href="/store.php?category=3">Electronics</a>
+	<a href="/store.php?category=4">Furniture</a>
+	<a href="/store.php?category=5">Sports</a>
+	<a href="/store.php?category=6">Vehicle</a>
+	<a href="/store.php?category=6">Others</a>
+</div>
 <div>
 	<form>
 		<select name="college">
