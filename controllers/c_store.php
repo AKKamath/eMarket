@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require("../controllers/includes/helpers.php");
     require("../models/m_store.php");
     if(empty($_GET["category"]))

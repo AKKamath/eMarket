@@ -81,8 +81,10 @@
                 "WHERE Category = " . $parameters[0] . " AND College = ". $parameters[1] . ";");
         while($row = mysqli_fetch_row($raw))
             $item[] = new item($row);
+        mysqli_close($connection);
         if(!empty($item))
             return $item;
-        else return null;
+        else 
+            return null;
     }
 ?>
