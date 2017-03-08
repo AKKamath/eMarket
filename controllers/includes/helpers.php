@@ -1,4 +1,7 @@
 <?php
+    // Enable sessions
+    session_start();
+    
     function render($view, $values = [])
     {
         // if view exists, render it
@@ -8,6 +11,8 @@
             extract($values);
             // render view (between header and footer)
             require("../views/header.php");
+            if(!empty($values["msg"]))
+                echo "<script>alert(\"" . $values["msg"] ."\");</script>";
             require("../views/{$view}");
             require("../views/footer.html");
             exit;
