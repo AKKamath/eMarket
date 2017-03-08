@@ -1,5 +1,0 @@
-/**
- * jquery.js
- *
- * Global JavaScript.
- */

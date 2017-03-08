@@ -3,3 +3,23 @@
  *
  * Global CSS.
  */
+
+.container
+{
+    /* center contents */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#top
+{
+    /* surround with whitespace */
+    margin-bottom: 30px;
+    margin-top: 25px;
+}
+
+#middle
+{
+    width: auto;
+}
