@@ -1,4 +1,1 @@
-<?php
-    require("../controllers/includes/helpers.php");
-    render("v_login.html", array("title" => "Login"));
-?>
+<?php require("../controllers/c_login.php"); ?>
