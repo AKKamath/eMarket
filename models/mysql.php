@@ -1,4 +1,6 @@
 <?php
+    ini_set("display_errors", true);
+    error_reporting(E_ALL);
     function connect($path)
     {
         // Read MySQL details

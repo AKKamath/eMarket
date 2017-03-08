@@ -1,17 +1,10 @@
 <?php
-    require("../models/mysql.php");
-    function get_items($parameters = array(0, 0))
-    {
-        $connection = connect("../models/config.json");
-        if($paramters[0] == 0 && $parameters[1] == 0)
-            $raw = mysqli_query($connection, "SELECT (Image, Name, Price, College, Category, Selldate, Seller) FROM Sales;");
-        else if($parameters[1] != 0 && $parameters[0] == 0)
-            $raw = mysqli_query($connection, "SELECT (Image, Name, Price, College, Category, Selldate, Seller) FROM Sales WHERE College =" . $parameters[1] . ";");
-        else if($parameters[0] != 0 && $parameters[1] == 0)
-            $raw = mysqli_query($connection, "SELECT (Image, Name, Price, College, Category, Selldate, Seller) FROM Sales WHERE Category =" . $parameters[0] . ";");
-        else
-            $raw = mysqli_query($connection, "SELECT (Image, Name, Price, College, Category, Selldate, Seller) FROM Sales " .
-                "WHERE Category = " . $parameters[0] . " AND College = ". $parameters[1] . ";");
-        echo print_r($data);
-    }
+    require("../controllers/includes/helpers.php");
+    require("../models/m_store.php");
+    if(empty($_GET["category"]))
+        $_GET["category"] = 0;
+    if(empty($_GET["college"]))
+        $_GET["college"] = 0;
+    $items = get_items(array($_GET["category"], $_GET["college"]));
+    render("v_store.php", array("title" => "Store", "data" => $items));
 ?>
