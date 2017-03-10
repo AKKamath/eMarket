@@ -1,0 +1,1 @@
+<?php require("../controllers/c_postad.php"); ?>
