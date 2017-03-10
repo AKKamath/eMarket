@@ -1,0 +1,1 @@
+<?php require("../controllers/c_logout.php"); ?>
