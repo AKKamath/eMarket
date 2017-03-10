@@ -6,9 +6,9 @@ Front End: Ronit
 Back  End: Aditya  
 
 Important Files:
-[config.json](/models/config.json) - Should contain details of MySQL server
-[Users](/models/Users.sql) - Contains SQL for Users table
-[Sales](/models/Sales.sql) - Contains SQL for Sales table
+[config.json](/models/config.json) - Should contain details of MySQL server  
+[Users](/models/Users.SQL) - Contains SQL for Users table  
+[Sales](/models/Sales.SQL) - Contains SQL for Sales table  
 
 Front End Progress:
 - [ ] Main
