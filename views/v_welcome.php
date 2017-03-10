@@ -20,7 +20,7 @@
     				<td><img width="100px" height="50px" src= "<?php echo "images/" . $obj["image"]; ?>"></td>
     				<td><?= $obj["name"]; ?></td>
     				<td><?= $obj["desc"]; ?></td>
-    				<td><?= $obj["price"]; ?></td>
+    				<td><?= $obj["price"] == -1 ? "On Donation" : $obj["price"]; ?></td>
     				<td><?= $obj["date"]; ?></td>
                     <td><button name="delete" value= <?= $obj["item"]; ?>>Delete</button></td>
     			</tr>
