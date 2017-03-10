@@ -3,11 +3,11 @@
     require("../models/m_login.php");
     
     // Normal page load
-    if($_SESSION["REQUEST_METHOD"] == "GET")
+    if($_SERVER["REQUEST_METHOD"] == "GET")
         render("v_login.html", array("title" => "Login"));
         
     // Submit info
-    else if($_SESSION["REQUEST_METHOD"] == "POST")
+    else if($_SERVER["REQUEST_METHOD"] == "POST")
     {
         // Check for valid inputs
         if(empty($_POST["email"]) || empty($_POST["password"]))
@@ -43,10 +43,11 @@
         // Everything looks good, let's get this show on the road
         else
         {
-            $_SESSION["id"]    = $details["id"];
-            $_SESSION["name"]  = $details["name"];
-            $_SESSION["sex"]   = $details["sex"];
-            $_SESSION["email"] = $details["email"];
+            $_SESSION["id"]      = $details["id"];
+            $_SESSION["name"]    = $details["name"];
+            $_SESSION["sex"]     = $details["sex"];
+            $_SESSION["email"]   = $details["email"];
+            $_SESSION["college"] = $details["college"];
             header("Location: /index.php");
             exit;
         }
