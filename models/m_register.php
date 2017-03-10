@@ -12,6 +12,7 @@
         if(mysqli_affected_rows($connection) != 1)
             return -1;
         $rows = mysqli_fetch_row(mysqli_query($connection, "SELECT LAST_INSERT_ID() AS id"));
+        mysqli_close($connection);
         return $rows;
     }
 ?>

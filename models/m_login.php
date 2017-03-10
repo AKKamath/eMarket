@@ -3,7 +3,7 @@
     function check($data)
     {
         $connection = connect("../models/config.json");
-        $rows = mysqli_fetch_row(mysqli_query($connection, "SELECT Id, Name, Gender, Password FROM Users WHERE Email = \"" . $data["email"] . "\";"));
+        $rows = mysqli_fetch_row(mysqli_query($connection, "SELECT Id, Name, Gender, Password, CollegeId FROM Users WHERE Email = \"" . $data["email"] . "\";"));
         if(empty($rows))
             return 0;
         else if(!password_verify($data["password"], $rows[3]))
@@ -13,8 +13,10 @@
             "id" => $rows[0],
             "name" => $rows[1],
             "sex" => $rows[2],
-            "email" => $data["email"]
+            "email" => $data["email"],
+            "college" => $rows[4]
             );
+        mysqli_close($connection);
         return $data;
     }
 ?>

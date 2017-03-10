@@ -71,13 +71,13 @@
     {
         $connection = connect("../models/config.json");
         if($parameters[0] == 0 && $parameters[1] == 0)
-            $raw = mysqli_query($connection, "SELECT Image, Name, Price, College, Category, Selldate, Seller FROM Sales;");
+            $raw = mysqli_query($connection, "SELECT Image, Name, Price, College, Category, SellDate, ItemId FROM Sales;");
         else if($parameters[1] != 0 && $parameters[0] == 0)
-            $raw = mysqli_query($connection, "SELECT Image, Name, Price, College, Category, Selldate, Seller FROM Sales WHERE College =" . $parameters[1] . ";");
+            $raw = mysqli_query($connection, "SELECT Image, Name, Price, College, Category, SellDate, ItemId FROM Sales WHERE College =" . $parameters[1] . ";");
         else if($parameters[0] != 0 && $parameters[1] == 0)
-            $raw = mysqli_query($connection, "SELECT Image, Name, Price, College, Category, Selldate, Seller FROM Sales WHERE Category =" . $parameters[0] . ";");
+            $raw = mysqli_query($connection, "SELECT Image, Name, Price, College, Category, SellDate, ItemId FROM Sales WHERE Category =" . $parameters[0] . ";");
         else
-            $raw = mysqli_query($connection, "SELECT Image, Name, Price, College, Category, Selldate, Seller FROM Sales " .
+            $raw = mysqli_query($connection, "SELECT Image, Name, Price, College, Category, SellDate, ItemId FROM Sales " .
                 "WHERE Category = " . $parameters[0] . " AND College = ". $parameters[1] . ";");
         while($row = mysqli_fetch_row($raw))
             $item[] = new item($row);
