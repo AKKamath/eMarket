@@ -53,10 +53,11 @@
         }
         else
         {
-            $_SESSION["id"]    = $id;
-            $_SESSION["name"]  = $_POST["name"];
-            $_SESSION["sex"]   = $_POST["sex"];
-            $_SESSION["email"] = $_POST["email"];
+            $_SESSION["id"]      = $id;
+            $_SESSION["name"]    = $_POST["name"];
+            $_SESSION["sex"]     = $_POST["sex"];
+            $_SESSION["email"]   = $_POST["email"];
+            $_SESSION["college"] = $_POST["cid"];
             header("Location: /index.php");
             exit;
         }
