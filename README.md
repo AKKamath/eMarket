@@ -5,7 +5,7 @@ An online college marketplace similar to that of OLX.
 Front End: Ronit  
 Back  End: Aditya  
 
-Important Files:
+Important Files:  
 [config.json](/models/config.json) - Should contain details of MySQL server  
 [Users](/models/Users.SQL) - Contains SQL for Users table  
 [Sales](/models/Sales.SQL) - Contains SQL for Sales table  
