@@ -48,7 +48,7 @@
             $_SESSION["sex"]     = $details["sex"];
             $_SESSION["email"]   = $details["email"];
             $_SESSION["college"] = $details["college"];
-            header("Location: /index.php");
+            header("Location: /");
             exit;
         }
     }
