@@ -22,13 +22,12 @@
         if(empty($_POST["category"]) || empty($_POST["title"]) || empty($_POST["desc"]) || empty($_POST["contact"]) ||
             (empty($_POST["choice"]) && empty($_POST["price"])))
         {
-            echo empty($_POST["category"]);
-            echo empty($_POST["title"]);
-            echo empty($_POST["desc"]);
-            echo empty($_POST["contact"]);
-            echo (empty($_POST["choice"]) && empty($_POST["price"]));
             render("v_postad.html", array("title" => "Post Ad", "msg" => "All fields are required."));
-            
+            exit;
+        }
+        if($_POST["price"] <= 0 && empty($_POST["choice"]))
+        {
+            render("v_postad.html", array("title" => "Post Ad", "msg" => "Price must be > 0."));
             exit;
         }
         if(strlen($_POST["title"]) < 4)
