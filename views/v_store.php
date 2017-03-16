@@ -42,13 +42,13 @@
     		<?php if(!empty($data))
     		    foreach ($data as $obj): ?>
         		<tr>
-    				<td><img width="100px" height="50px" src= "<?php echo "images/" . $obj->imgSource; ?>"></td>
-    				<td><?= $obj->name; ?></td>
-    				<td><?= $obj->price == -1 ? "On Donation" : $obj->price ?></td>
-    				<td><?= $obj->college; ?></td>
-    				<td><?= $obj->category; ?></td>
-    				<td><?= $obj->sellDate; ?></td>
-                    <td><a href= <?= "item.php?Id=" . $obj->seller ?>>Contact Seller</a></td>
+    				<td><img width="100px" height="50px" src= "<?php echo "images/" . htmlspecialchars($obj->imgSource) ?>"></td>
+    				<td><?= htmlspecialchars($obj->name) ?></td>
+    				<td><?= $obj->price == -1 ? "On Donation" : htmlspecialchars($obj->price) ?></td>
+    				<td><?= htmlspecialchars($obj->college) ?></td>
+    				<td><?= htmlspecialchars($obj->category) ?></td>
+    				<td><?= htmlspecialchars($obj->sellDate) ?></td>
+                    <td><a href= <?= "item.php?id=" . htmlspecialchars($obj->seller) ?>>Contact Seller</a></td>
     			</tr>
 			<?php endforeach ?>
 		</tbody>

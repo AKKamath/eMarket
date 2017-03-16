@@ -23,7 +23,14 @@
         <div id="background"></div>
         <div class="container">
             <div id="top">
+
                 <div> <font color:"white"><h1>SELLR.</h1></font> </div>
+
+                
+                <?php if(!empty($_SESSION["id"])): ?>
+                    <h1>Welcome, <a href = "/"><?= htmlspecialchars($_SESSION["name"]); ?></a></h1>
+                <?php endif ?>
+
             </div>
             
             <div id="middle">
