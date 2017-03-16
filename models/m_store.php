@@ -67,11 +67,13 @@
             }
         }
     }
-    function get_items($parameters = array(0, 0))
+    function get_items($parameters = array(0, 0, 0))
     {
         $connection = connect("../models/config.json");
-        if($parameters[0] == 0 && $parameters[1] == 0)
+        if($parameters[0] == 0 && $parameters[1] == 0 && $parameters[2] == 0)
             $raw = mysqli_query($connection, "SELECT Image, Name, Price, College, Category, SellDate, ItemId FROM Sales;");
+        else if($parameters[2] != 0)
+            $raw = mysqli_query($connection, "SELECT Image, Name, Price, College, Category, SellDate, ItemId FROM Sales WHERE SellerId = ". $parameters[2] .";");
         else if($parameters[1] != 0 && $parameters[0] == 0)
             $raw = mysqli_query($connection, "SELECT Image, Name, Price, College, Category, SellDate, ItemId FROM Sales WHERE College =" . $parameters[1] . ";");
         else if($parameters[0] != 0 && $parameters[1] == 0)
