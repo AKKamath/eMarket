@@ -7,7 +7,7 @@
         
         <title><?= htmlspecialchars($title) ?></title>
         
-        <link rel="stylesheet" type="text/css" href="/css/styles.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
 		
 		 <!-- http://jquery.com/ -->
         <script src="js/jquery-1.11.3.min.js"></script>
@@ -20,9 +20,10 @@
 		
     </head>
     <body>
+        <div id="background"></div>
         <div class="container">
             <div id="top">
-                <div> Some title with some image </div>
+                <div> <font color:"white"><h1>SELLR.</h1></font> </div>
             </div>
             
             <div id="middle">
