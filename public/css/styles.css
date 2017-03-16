@@ -3,6 +3,7 @@
  * Welcome to any color or design suggestions!
  * Global CSS.
  */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
 
 .container
 {
@@ -95,7 +96,8 @@
 
 .index_page
 {
-    display: inline-block;
+    
+    display: block;
     margin-bottom: 25px;
 }
 
@@ -111,10 +113,80 @@
 #intro
 {
     font-family:Sans-Serif;
-    font-size:larger;
+    font-size:150%;
     color: black;
     text-align:left;
     margin-left: 10px;
     margin-top:20px;
     margin-bottom:50px;
+}
+
+.form_container {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+fieldset {
+  border: medium none;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+#RegisterF {
+  
+  padding: 25px;
+  margin: 15px 0;
+  
+}
+
+#RegisterF input[type="text"],
+#RegisterF input[type="email"],
+#RegisterF select,
+#RegisterF input[type="password"]
+{
+  font-family:trial;
+  color: black;
+  width: 100%;
+  border: 1px solid #ccc;
+  margin: 0 0 5px;
+  padding: 10px;
+  background:none;
+}
+
+#RegisterF button[type="submit"] {
+  cursor: pointer;
+  font-family:trial;
+  width: 100%;
+  border: none;
+  background: black;
+  color: white;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    black;
+    
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    black;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    black;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    black;
+   
+}
+#gender
+{
+    font-family:trial;
+    font-size:85%;
 }
