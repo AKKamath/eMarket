@@ -11,7 +11,7 @@ Important Files:
 [Sales](/models/Sales.SQL) - Contains SQL for Sales table  
 
 Front End Progress:
-- [ ] [Header](/views/v_header.php)
+- [ ] [Header](/views/header.php)
 - [ ] [Main](/views/v_intro.html)
 - [ ] [Welcome](/views/v_welcome.php)
 - [ ] [Registration](/views/v_register.html)
