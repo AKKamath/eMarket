@@ -23,6 +23,9 @@
         <div class="container">
             <div id="top">
                 <div> Some title with some image </div>
+                <?php if(!empty($_SESSION["id"])): ?>
+                    <h1>Welcome, <a href = "/"><?= htmlspecialchars($_SESSION["name"]); ?></a></h1>
+                <?php endif ?>
             </div>
             
             <div id="middle">
