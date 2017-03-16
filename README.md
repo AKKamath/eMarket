@@ -28,5 +28,5 @@ Back End Progress:
 - [X] Login
 - [X] Store
 - [X] Post Ad
-- [ ] Display Item
-- [ ] Display User
+- [X] Display Item
+- [X] Display User
