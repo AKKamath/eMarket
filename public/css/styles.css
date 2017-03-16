@@ -136,7 +136,7 @@ fieldset {
   width: 100%;
 }
 
-#RegisterF {
+#RegisterF,#LoginF {
   
   padding: 25px;
   margin: 15px 0;
@@ -146,9 +146,10 @@ fieldset {
 #RegisterF input[type="text"],
 #RegisterF input[type="email"],
 #RegisterF select,
+#LoginF input[type="email"],
+#LoginF input[type="password"],
 #RegisterF input[type="password"]
 {
-  font-family:trial;
   color: black;
   width: 100%;
   border: 1px solid #ccc;
@@ -157,9 +158,9 @@ fieldset {
   background:none;
 }
 
-#RegisterF button[type="submit"] {
+#RegisterF button[type="submit"],
+#LoginF button[type="submit"]{
   cursor: pointer;
-  font-family:trial;
   width: 100%;
   border: none;
   background: black;
@@ -171,18 +172,22 @@ fieldset {
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color:    black;
+    font-family:trial;
     
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
    color:    black;
+   font-family:trial;
    opacity:  1;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
    color:    black;
+   font-family:trial;
    opacity:  1;
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
    color:    black;
+   font-family:trial;
    
 }
 #gender
@@ -190,3 +195,9 @@ fieldset {
     font-family:trial;
     font-size:85%;
 }
+#RegisterF select {
+  
+  font-family:trial;
+  
+}
+

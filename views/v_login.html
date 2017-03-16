@@ -1,7 +1,16 @@
+</div>
+
+<div class="form_container">
 <form id="LoginF" method="POST" action="/login.php">
-    E-mail address: <input type="email" name="email"><br>
-    Password: <input type="password" name="password"><br>
+    <fieldset>
+    <input placeholder="EMAIL" type="email" name="email"><br>
+    </fieldset>
+    <fieldset>
+    <input placeholder="password" type="password" name="password"><br>
+    </fieldset>
     <span id='msg'></span>
+    <fieldset>
+    <button form="LoginF" type="submit">Log In</button>
+    </fieldset>
 </form>
-<button form="LoginF" type="submit">Log In</button>
-<span>or, <a href='/register.php'>Register</a></span>
+<span><h4>not a member, <a href='/register.php'>Register</a></h4></span>
