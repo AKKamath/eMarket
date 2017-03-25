@@ -13,7 +13,7 @@
         $DB = $options->{"name"};
     
         // Initialize connection
-        $connection = mysqli_connect($host, $username, $password, $DB);
+        $connection = mysqli_connect($host, "root", $password, "Proj_2");
         return $connection;
     }
 ?>

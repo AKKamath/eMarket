@@ -1,19 +1,26 @@
-<h1>Welcome, <a href='/'>abc</a></h1><a href='/postad'>Sell Item</a></br>
+<!--<h1>Welcome, <a href='/'>abc</a></h1><a href='/postad'>Sell Item</a></br>
 <a href='/store'>Go to Store</a></br>
 <a href='/logout'>Logout</a><br><div>
-<span id='msg'></span><br>
+<span id='msg'></span><br>-->
 
-<table style='
-        border: 2px solid wheat;'>
+<div class="tbl-header">
+<table class="table">
+	<thead>
 			<tr>
-				<th>Image</td>
-				<th>Title</td>
-				<th>Description</td>
-				<th>Price</td>
-				<th>Date</td>
-				<th>Contact</td>
+				<th>Image</th>
+				<th>Title</th>
+				<th>Description</th>
+				<th>Price</th>
+				<th>Date</th>
+				<th>Contact</th>
 			</tr>
-			<tr>
+	</thead>
+	</table>
+	</div>
+	<div class="tbl-content">
+		<table class="table">
+			<tbody>
+			<tr id="table_row">
 				<td><img width=100px height=50px src= <?= "images/". htmlspecialchars($data["image"])?>></td>
 				<td><?= htmlspecialchars($data["name"]) ?></td>
 				<td><?= htmlspecialchars($data["desc"]) ?></td>
@@ -26,6 +33,8 @@
 					<a href=<?= '/store.php?id=' . htmlspecialchars($data["seller"])?>>View all items from this Seller</a>
 				</td>
 			</tr>
+			</tbody>
 		</table>
+		</div>
 
 </div>
