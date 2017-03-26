@@ -37,13 +37,15 @@
 <table class="table">
     <thead>
         <tr>
-            <th>Image</th>
-            <th>Title</th>
-            <th>Price</th>
-            <th>College</th>
-            <th>Category</th>
+            <th id="img">Image</th>
+            <th id="title">Title</th>
+            <th id="price">Price</th>
+            <th id="details">Details</th>
+            <th></th>
+            <!-- <th>College</th> -->
+            <!-- <th>Category</th>
             <th>Date</th>
-            <th>Contact Seller</th>
+            <th>Contact Seller</th> -->
         </tr>
     </thead>
     </table>
@@ -54,17 +56,19 @@
         <?php if(!empty($data))
             foreach ($data as $obj): ?>
             <tr id="table_row">
-                <td><img width="90px" height="50px" src= "<?php echo "images/" . htmlspecialchars($obj->imgSource) ?>"></td>
-                <td><b><?= htmlspecialchars($obj->name) ?></b></td>
-                <td><b><?= $obj->price == -1 ? "On Donation" : htmlspecialchars($obj->price) ?></b></td>
-                <td><b><?= htmlspecialchars($obj->college) ?></b></td>
-                <td><b><?= htmlspecialchars($obj->category) ?></b></td>
-                <td><b><?= htmlspecialchars($obj->sellDate) ?></b></td>
-                <td><b><a href= <?= "item.php?id=" . htmlspecialchars($obj->seller) ?>>Contact Seller</a></b></td>
+                <td id="img"><img width="90px" height="50px" src= "<?php echo "images/" . htmlspecialchars($obj->imgSource) ?>"></td>
+                <td id="title"><b><?= htmlspecialchars($obj->name) ?></b></td>
+                <td id="price"><b><?= $obj->price == -1 ? "On Donation" : htmlspecialchars($obj->price) ?></b></td>
+                <td id="details"><button id="get">Details</button></td>
+                <td class="hidden" vis="1" ><p><b>College: <?= htmlspecialchars($obj->college) ?></b><br>
+                <b>Category: <?= htmlspecialchars($obj->category) ?></b><br>
+                <b>Date: <?= htmlspecialchars($obj->sellDate) ?></b><br>
+                <b><a href= <?= "item.php?id=" . htmlspecialchars($obj->seller) ?>>Contact Seller</a></b></p></td>
             </tr>
         <?php endforeach ?>
     </tbody>
 </table>
+<div id="ajax"></div>
 </div>
 
 

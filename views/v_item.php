@@ -23,14 +23,14 @@
 			<tr id="table_row">
 				<td><img width=100px height=50px src= <?= "images/". htmlspecialchars($data["image"])?>></td>
 				<td><?= htmlspecialchars($data["name"]) ?></td>
-				<td><?= htmlspecialchars($data["desc"]) ?></td>
+				<td id="description"><?= htmlspecialchars($data["desc"]) ?></td>
 				<td><?= $data["price"] == -1 ? "On Donation" : htmlspecialchars($data["price"]) ?></td>
 				<td><?= htmlspecialchars($data["date"]) ?></td>
 				<td><?= htmlspecialchars($data["contact"]) ?></td>
 			</tr>
 			<tr>
 				<td colspan='6'>
-					<a href=<?= '/store.php?id=' . htmlspecialchars($data["seller"])?>>View all items from this Seller</a>
+					<a id="link" href=<?= '/store.php?id=' . htmlspecialchars($data["seller"])?>>View all items from this Seller</a>
 				</td>
 			</tr>
 			</tbody>
