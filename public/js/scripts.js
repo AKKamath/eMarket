@@ -35,7 +35,7 @@ $(document).ready(function(){
             var college= $target.parent().find(".hidden").find("b.college").text();
             var date= $target.parent().find(".hidden").find("b.date").text();
             var category= $target.parent().find(".hidden").find("b.category").text();
-            var more = '<br><div class="popup">More<span class="popuptext" id="myPopup"><p>'+college+'</p><p>'+category
+            var more = '<br><br><div class="popup"><b>more info</b><span class="popuptext" id="myPopup"><p>'+college+'</p><p>'+category
                          +'</p><p>'+date+'</p><a href="'
                          +url
                         +'">Contact Seller</a>'

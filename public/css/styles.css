@@ -342,13 +342,13 @@ td{
     visibility: visible;
     display:none;
     width: 250px;
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
     text-align: center;
     border-radius: 6px;
     padding: 8px 0;
     position: absolute;
-    
+    text-decoration:bold;
     bottom: 125%;
     left: 50%;
     margin-left: -80px;
@@ -438,4 +438,6 @@ td{
 {
     visibility:collapse;
     overflow:visible;
+    font-family:Papyrus;
+    text-decoration:bold;
 }
