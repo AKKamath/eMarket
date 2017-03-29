@@ -62,7 +62,7 @@
                 <td id="img"><img width="90px" height="50px" src= "<?php echo "images/" . htmlspecialchars($obj->imgSource) ?>"></td>
                 <td id="title"><b><?= htmlspecialchars($obj->name) ?></b></td>
                 <td id="price"><b><?= $obj->price == -1 ? "On Donation" : htmlspecialchars($obj->price) ?></b></td>
-                <td id="details"><a href="#" class="myButton">Details</a></td>
+                <td id="details"><button class="myButton">Details</button></td>
                 <td class="hidden" vis="1" colspan="1" ><p class="recieved"><b class="college">College: <?= htmlspecialchars($obj->college) ?></b><br>
                 <b class="category">Category: <?= htmlspecialchars($obj->category) ?></b><br>
                 <b class="date">Date: <?= htmlspecialchars($obj->sellDate) ?></b><br>

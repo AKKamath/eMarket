@@ -12,7 +12,7 @@
     margin-right: auto;
     text-align: center;
     position: relative;
-    
+    overflow:auto;
 }
 
 @font-face
@@ -257,6 +257,7 @@ select
  .tbl-content{
   
   overflow-x:auto;
+  overflow-y:auto;
   margin-top: 0px;
   border: 1px solid rgba(255,255,255,0.3);
   background-color: rgba(128,128,128,0.3);

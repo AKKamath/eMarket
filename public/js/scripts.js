@@ -6,7 +6,7 @@ $(document).ready(function(){
   
     $("td.hidden").find("p").hide();
     $("td.hidden").attr("vis",0);
-    $("a.myButton").click(function(event){
+    $("button").click(function(event){
         event.stopPropagation();
         var $target1= $(event.target);
         // console.log($target.parent().parent());
@@ -91,5 +91,17 @@ $(document).ready(function(){
        
    });
    
+   $("tr#table_row").hover(function(){
+        if($(this).find("#price").text()==="On Donation")
+        {
+            $(this).css("background-color","rgba(0,255,0,0.7)");
+        }
+        else
+        {
+            $(this).css("background-color","rgba(255,0,0,0.7)");
+        }
+   },function(){
+       $(this).css("background-color","rgba(169,169,169,0.3)");
+   });
         
 })
