@@ -1,3 +1,5 @@
+
+
 $(document).ready(function(){
   
     
@@ -25,9 +27,19 @@ $(document).ready(function(){
                 // x=data;
                 // console.log(x);
             var v =$(data).find("#description").text();
-            console.log(v);
+            var contact= $(data).find("#contact").text();
+            // console.log(v);
+            var items= $(data).find("#link").attr("href");
+            var more = '<br><div class="popup">More<span class="popuptext" id="myPopup"><a href="'
+                         +url
+                        +'">Contact Seller</a>'
+                        +'<p>'+contact+'</p>'
+                        +'<a href="'+items+'">More items from this seller</a>'
+                        +'</span></div>';
+            
+            
             $target.parent().find(".hidden").find("p").html('<b>Description:</b><br><span style="font-family:courier">'+v+'</span>');
-            $target.parent().find(".hidden").find("p").append('<br><a href='+url+'>Contact Seller</a>');
+            $target.parent().find(".hidden").find("p").append(more);
             });
             }
             
@@ -46,5 +58,23 @@ $(document).ready(function(){
             
         } 
     });
+    
+    
+   $(".recieved").on('click','.popup',function(){
+    //   var popup= $(".popup");
+    //   console.log($(this));
+    //   alert("i work");
+        $(this).find("#myPopup").toggle();
+       
+   });
+   
+   $(".recieved").on('mouseleave',function(){
+    //   var popup= $(".popup");
+    //   console.log($(this));
+    //   alert("i work");
+        $(this).find("#myPopup").hide();
+       
+   });
+   
         
 })

@@ -20,6 +20,7 @@
     
     <script type="text/javascript" src="js/scripts.js"></script>
     
+    
 </head>
 <body>
     <div id="background"></div>

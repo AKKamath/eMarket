@@ -33,9 +33,10 @@
 </div>
 
 <div id="mainContent">
-<div class="tbl-header">
-<table class="table">
-    <thead>
+ <table class="table">   
+
+
+    <thead class="tbl-header">
         <tr>
             <th id="img">Image</th>
             <th id="title">Title</th>
@@ -48,11 +49,13 @@
             <th>Contact Seller</th> -->
         </tr>
     </thead>
-    </table>
-    </div>
-    <div class="tbl-content">
-        <table class="table">
-    <tbody>
+    
+    
+
+    
+    
+        
+    <tbody class="tbl-content">
         <?php if(!empty($data))
             foreach ($data as $obj): ?>
             <tr id="table_row">
@@ -60,15 +63,15 @@
                 <td id="title"><b><?= htmlspecialchars($obj->name) ?></b></td>
                 <td id="price"><b><?= $obj->price == -1 ? "On Donation" : htmlspecialchars($obj->price) ?></b></td>
                 <td id="details"><button id="get">Details</button></td>
-                <td class="hidden" vis="1" ><p><b>College: <?= htmlspecialchars($obj->college) ?></b><br>
+                <td class="hidden" vis="1" ><p class="recieved"><!--<b>College: <?= htmlspecialchars($obj->college) ?></b><br>
                 <b>Category: <?= htmlspecialchars($obj->category) ?></b><br>
-                <b>Date: <?= htmlspecialchars($obj->sellDate) ?></b><br>
+                <b>Date: <?= htmlspecialchars($obj->sellDate) ?></b><br>-->
                 <b><a href= <?= "item.php?id=" . htmlspecialchars($obj->seller) ?>>Contact Seller</a></b></p></td>
             </tr>
         <?php endforeach ?>
     </tbody>
-</table>
-<div id="ajax"></div>
-</div>
 
+
+
+</table>
 

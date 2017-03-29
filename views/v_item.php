@@ -26,7 +26,7 @@
 				<td id="description"><?= htmlspecialchars($data["desc"]) ?></td>
 				<td><?= $data["price"] == -1 ? "On Donation" : htmlspecialchars($data["price"]) ?></td>
 				<td><?= htmlspecialchars($data["date"]) ?></td>
-				<td><?= htmlspecialchars($data["contact"]) ?></td>
+				<td id="contact"><?= htmlspecialchars($data["contact"]) ?></td>
 			</tr>
 			<tr>
 				<td colspan='6'>
