@@ -6,7 +6,7 @@ $(document).ready(function(){
   
     $("td.hidden").find("p").hide();
     $("td.hidden").attr("vis",0);
-    $("button").click(function(event){
+    $("a.myButton").click(function(event){
         event.stopPropagation();
         var $target1= $(event.target);
         // console.log($target.parent().parent());
@@ -15,7 +15,8 @@ $(document).ready(function(){
         if( $target.parent().find(".hidden").attr("vis")==1){
             $target.parent().find(".hidden").find("p").slideUp();
              $target.parent().find(".hidden").attr("vis",0);
-           
+             $target.parent().find(".hidden").attr("colspan",1);
+             $target.parent().find("#details").show("slow");
         }
         else{
             
@@ -38,8 +39,11 @@ $(document).ready(function(){
                         +'</span></div>';
             
             
+            
+            $target.parent().find(".hidden").attr("colspan",2);
             $target.parent().find(".hidden").find("p").html('<b>Description:</b><br><span style="font-family:courier">'+v+'</span>');
             $target.parent().find(".hidden").find("p").append(more);
+            $target.parent().find("#details").hide("slow");
             });
             }
             
@@ -56,7 +60,9 @@ $(document).ready(function(){
             $(this).find(".hidden").find("p").slideUp();
             $(this).find(".hidden").attr("vis",0);
             
-        } 
+        }
+        $(this).find(".hidden").attr("colspan",1);
+        $(this).find("#details").show("slow");
     });
     
     
