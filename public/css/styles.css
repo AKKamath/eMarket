@@ -341,9 +341,9 @@ td{
 .popup .popuptext {
     visibility: visible;
     display:none;
-    width: 160px;
+    width: 250px;
     background-color: white;
-    color: #fff;
+    color: black;
     text-align: center;
     border-radius: 6px;
     padding: 8px 0;

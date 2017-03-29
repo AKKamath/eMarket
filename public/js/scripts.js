@@ -21,8 +21,8 @@ $(document).ready(function(){
         }
         else{
             
-            var url = $target.parent().find(".hidden").find("a").attr("href");
-            // console.log(url.length);
+            var url = $target.parent().find(".hidden").find("a.cont").attr("href");
+             console.log(url);
             // var x;
             if(undefined!==url){
             $.get(url,function(data){
@@ -32,11 +32,15 @@ $(document).ready(function(){
             var contact= $(data).find("#contact").text();
             // console.log(v);
             var items= $(data).find("#link").attr("href");
-            var more = '<br><div class="popup">More<span class="popuptext" id="myPopup"><a href="'
+            var college= $target.parent().find(".hidden").find("b.college").text();
+            var date= $target.parent().find(".hidden").find("b.date").text();
+            var category= $target.parent().find(".hidden").find("b.category").text();
+            var more = '<br><div class="popup">More<span class="popuptext" id="myPopup"><p>'+college+'</p><p>'+category
+                         +'</p><p>'+date+'</p><a href="'
                          +url
                         +'">Contact Seller</a>'
                         +'<p>'+contact+'</p>'
-                        +'<a href="'+items+'">More items from this seller</a>'
+                        +'<a href="'+items+'">More from this seller</a>'
                         +'</span></div>';
             
             

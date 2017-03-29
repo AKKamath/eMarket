@@ -63,10 +63,10 @@
                 <td id="title"><b><?= htmlspecialchars($obj->name) ?></b></td>
                 <td id="price"><b><?= $obj->price == -1 ? "On Donation" : htmlspecialchars($obj->price) ?></b></td>
                 <td id="details"><a href="#" class="myButton">Details</a></td>
-                <td class="hidden" vis="1" colspan="1" ><p class="recieved"><!--<b>College: <?= htmlspecialchars($obj->college) ?></b><br>
-                <b>Category: <?= htmlspecialchars($obj->category) ?></b><br>
-                <b>Date: <?= htmlspecialchars($obj->sellDate) ?></b><br>-->
-                <b><a href= <?= "item.php?id=" . htmlspecialchars($obj->seller) ?>>Contact Seller</a></b></p></td>
+                <td class="hidden" vis="1" colspan="1" ><p class="recieved"><b class="college">College: <?= htmlspecialchars($obj->college) ?></b><br>
+                <b class="category">Category: <?= htmlspecialchars($obj->category) ?></b><br>
+                <b class="date">Date: <?= htmlspecialchars($obj->sellDate) ?></b><br>
+                <b><a class="cont" href= <?= "item.php?id=" . htmlspecialchars($obj->seller) ?>>Contact Seller</a></b></p></td>
             </tr>
         <?php endforeach ?>
     </tbody>
