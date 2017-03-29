@@ -14,9 +14,10 @@ $(document).ready(function(){
         
         if( $target.parent().find(".hidden").attr("vis")==1){
             $target.parent().find(".hidden").find("p").slideUp();
+             $target.parent().find(".hidden").css("visibility","collapse");
              $target.parent().find(".hidden").attr("vis",0);
-             $target.parent().find(".hidden").attr("colspan",1);
-             $target.parent().find("#details").show("slow");
+            //  $target.parent().find(".hidden").attr("colspan",1);
+             $target.parent().find("#details").show();
         }
         else{
             
@@ -40,16 +41,18 @@ $(document).ready(function(){
             
             
             
-            $target.parent().find(".hidden").attr("colspan",2);
+            // $target.parent().find(".hidden").attr("colspan",2);
             $target.parent().find(".hidden").find("p").html('<b>Description:</b><br><span style="font-family:courier">'+v+'</span>');
             $target.parent().find(".hidden").find("p").append(more);
-            $target.parent().find("#details").hide("slow");
+            
             });
             }
             
-            
+            $target.parent().find("#details").hide();
            
             $target.parent().find(".hidden").find("p").slideToggle();
+            $target.parent().find(".hidden").css("visibility","visible");
+            $target.parent().find(".hidden").show();
             $target.parent().find(".hidden").attr("vis",1);
            
         }
@@ -58,11 +61,13 @@ $(document).ready(function(){
     $("tr#table_row").mouseleave(function(){
         if($(this).find(".hidden").attr("vis")==1){
             $(this).find(".hidden").find("p").slideUp();
+            $(this).find(".hidden").hide();
             $(this).find(".hidden").attr("vis",0);
             
         }
-        $(this).find(".hidden").attr("colspan",1);
-        $(this).find("#details").show("slow");
+        // $(this).find(".hidden").attr("colspan",1);
+        $(this).find("#details").css("visibility","visible");
+        $(this).find("#details").show();
     });
     
     

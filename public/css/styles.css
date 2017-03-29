@@ -323,7 +323,7 @@ td{
 
 #price,#img,#title,#details
 {
-    width:150px;
+    width:170px;
 }
 #description
 {
@@ -436,5 +436,6 @@ td{
 
 .hidden
 {
-    overflow:hidden;
+    visibility:collapse;
+    overflow:visible;
 }

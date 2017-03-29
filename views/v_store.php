@@ -42,7 +42,7 @@
             <th id="title">Title</th>
             <th id="price">Price</th>
             <th id="details">Details</th>
-            <th></th>
+            <!--<th></th>-->
             <!-- <th>College</th> -->
             <!-- <th>Category</th>
             <th>Date</th>
