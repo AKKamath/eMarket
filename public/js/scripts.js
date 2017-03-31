@@ -103,5 +103,9 @@ $(document).ready(function(){
    },function(){
        $(this).css("background-color","rgba(169,169,169,0.3)");
    });
+   
+   $.validate({
+       form:'#RegisterF, #LoginF ,#postF'
+   });
         
 })

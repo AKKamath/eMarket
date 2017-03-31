@@ -3,13 +3,13 @@
 <div class= "form_container">
 <form id="RegisterF" method="POST" action="/register.php">
     <fieldset>
-    <input placeholder="Email address" type="email" name="email" required autofocus><br>
+    <input placeholder="Email address" type="email" name="email" data-validation="email" required autofocus><br>
     </fieldset>
     <fieldset>
-    <input placeholder="Name" type="text" name="name" required><br>
+    <input placeholder="Name" type="text" name="name" data-validation="required" required><br>
     </fieldset>
     <fieldset>
-    <select name='cid'>
+    <select name='cid' data-validation="required">
 	    <option value='0' selected disabled>Select College</option>
         <option value=31>Indian Institute of Technology, Delhi</option>
         <option value=33>Indian Institute of Technology, Guwahati</option>
@@ -19,14 +19,14 @@
     </select><br>
     </fieldset>
     <fieldset>
-    <input placeholder="Password" type="password" name="pwd"><br>
+    <input placeholder="Password" type="password" name="pwd" data-validation="length" data-validation-length="6-40"><br>
     </fieldset>
     <fieldset>
-    <input placeholder="Retype Password" type="password" name="rpwd"><br>
+    <input placeholder="Retype Password" type="password" name="rpwd" data-validation="confirmation"><br>
     </fieldset>
     <fieldset>
     <span id="gender">Gender:
-        <input type="radio" name="sex" value="0">M 
+        <input type="radio" name="sex" value="0" required data-validation="required">M 
         <input type="radio" name="sex" value="1">F
         </span>
         <br>
