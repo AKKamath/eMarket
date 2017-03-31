@@ -1,11 +1,14 @@
 <span id="link"><a class ="ghost-button" href='/store.php'>Purchase</a></span>
-<span id="link"><a class ="ghost-button" href='/postad.php'>Sell </a></span>
-<p>
+<span id="link"><a class ="ghost-button" href='/postad.php'>Sell </a></span><br><br><br>
+<span id="link"><button class ="ghost-button" id="myitems_button">My Items </button></span>
+<span id="link"><a class ="ghost-button" href='/logout.php'>Logout </a></span></p>
+
 <?php if(!empty($data)): ?>
     <form method=POST action='/'>
-    <div class="tbl-header">
-    <table class="table">
-        <thead>
+        
+
+    <table class="table" id="myitems">
+        <thead class="tbl-header">
             <tr>
                 <th>Image</th>
                 <th>Title</th>
@@ -15,11 +18,8 @@
                 <th>Remove</th>
             </tr>
         </thead>
-        </table>
-        </div>
-        <div class="tbl-content">
-            <table class="table">
-                <tbody>
+            
+                <tbody class="tbl-content">
                 <?php foreach ($data as $obj): ?>
                 <tr>
                     <td><img width="100px" height="50px" src= "<?php echo "images/" . $obj["image"]; ?>"></td>
@@ -32,10 +32,9 @@
             <?php endforeach ?>
         </tbody>
     </table>
-    </div>
     </form>
 <?php endif; ?>
 </p>
 
-<p id="link" align="right"><a id="direct" class="ghost-button" style="border:0px" href='/logout.php'>Logout</a></p>
+<!--<p id="link" align="right"><a id="direct" class="ghost-button" style="border:0px" href='/logout.php'>Logout</a></p>-->
 </div>

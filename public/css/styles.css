@@ -245,6 +245,7 @@
         table-layout: fixed;
         border-collapse:collapse;
         border-radius:6px;
+        
     }
     
     
@@ -445,4 +446,20 @@
     overflow:visible;
     font-family:Papyrus;
     text-decoration:bold;
+}
+
+#myitems_button
+{
+    background:none;
+}
+#myitems_button:hover
+{
+    background-color: black;
+  color: white;
+}
+
+#direct
+{
+    background: none;
+    text-align:left;
 }

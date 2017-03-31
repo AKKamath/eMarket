@@ -28,7 +28,15 @@
             <a class="ghost-button" style="border:0px; text-align: left;" href="/store.php?college=18">DTU New Delhi</a><br>
     
     </fieldset>
-    
+    <p id="heading"><span id = "Submit">Options</span></p>
+    <p>
+    <?php if(!empty($_SESSION["id"])): ?>
+    <a id="direct" class="ghost-button" style="border:0px" href='/logout.php'>Logout</a>
+    <a id="direct" class="ghost-button" style="border:0px" href='/postad.php'>Sell</a>
+    <?php else: ?>
+    <a id="direct" class="ghost-button" style="border:0px" href='/login.php'>Log In</a>
+    <?php endif ?>
+    </p>
 <span id="msg"></span><br>
 </div>
 

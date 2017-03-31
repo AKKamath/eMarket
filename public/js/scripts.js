@@ -3,10 +3,10 @@
 $(document).ready(function(){
   
     
-  
+    $(document).find("table#myitems").hide();
     $("td.hidden").find("p").hide();
     $("td.hidden").attr("vis",0);
-    $("button").click(function(event){
+    $("button.myButton").click(function(event){
         event.stopPropagation();
         var $target1= $(event.target);
         // console.log($target.parent().parent());
@@ -105,7 +105,13 @@ $(document).ready(function(){
    });
    
    $.validate({
-       form:'#RegisterF, #LoginF ,#postF'
+       form:'#RegisterF, #LoginF ,#postF',
+        modules : 'toggleDisabled',
+        diabledFormFilter : '#postF, #LoginF, #RegisterF'
+   });
+   
+   $("button#myitems_button").click(function(){
+       $(document).find("table#myitems").slideToggle("slow");
    });
         
 })
