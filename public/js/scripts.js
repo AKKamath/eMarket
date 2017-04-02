@@ -28,6 +28,10 @@ $(document).ready(function(){
             $.get(url,function(data){
                 // x=data;
                 // console.log(x);
+                if(typeof(data)===undefined)
+                {
+                     $target.parent().find(".hidden").find("p").html('<img alt="Loading" src="/img/ajax-loader.gif"/>');
+                }
             var v =$(data).find("#description").text();
             var contact= $(data).find("#contact").text();
             // console.log(v);
