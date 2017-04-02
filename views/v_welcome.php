@@ -22,12 +22,12 @@
                 <tbody class="tbl-content">
                 <?php foreach ($data as $obj): ?>
                 <tr>
-                    <td><img width="100px" height="50px" src= "<?php echo "images/" . $obj["image"]; ?>"></td>
+                    <td><img width="100px" height="50px" src= "<?php echo "images/" . $obj["image"]; ?>" onerror="this.onerror=null;this.src='/img/ajax-loader.gif';"></td>
                     <td><?= $obj["name"]; ?></td>
                     <td><?= $obj["desc"]; ?></td>
                     <td><?= $obj["price"] == -1 ? "On Donation" : $obj["price"]; ?></td>
                     <td><?= $obj["date"]; ?></td>
-                    <td><button name="delete" value= <?= $obj["item"]; ?>>Delete</button></td>
+                    <td><button class="myButton" name="delete" value= <?= $obj["item"]; ?>>Delete</button></td>
                 </tr>
             <?php endforeach ?>
         </tbody>

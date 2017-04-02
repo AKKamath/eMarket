@@ -67,7 +67,7 @@
         <?php if(!empty($data))
             foreach ($data as $obj): ?>
             <tr id="table_row">
-                <td id="img"><img width="90px" height="50px" src= "<?php echo "images/" . htmlspecialchars($obj->imgSource) ?>"></td>
+                <td id="img"><img width="90px" height="50px" src= "<?php echo "images/" . htmlspecialchars($obj->imgSource) ?>" onerror="this.onerror=null;this.src='/img/ajax-loader.gif';"></td>
                 <td id="title"><b><?= htmlspecialchars($obj->name) ?></b></td>
                 <td id="price"><b><?= $obj->price == -1 ? "On Donation" : htmlspecialchars($obj->price) ?></b></td>
                 <td id="details"><button class="myButton">Details</button></td>

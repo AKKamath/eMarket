@@ -106,8 +106,8 @@ $(document).ready(function(){
    
    $.validate({
        form:'#RegisterF, #LoginF ,#postF',
-        modules : 'toggleDisabled',
-        diabledFormFilter : '#postF, #LoginF, #RegisterF'
+        // modules : 'toggleDisabled',
+        // diabledFormFilter : '#postF, #LoginF, #RegisterF'
    });
    
    $("button#myitems_button").click(function(){
