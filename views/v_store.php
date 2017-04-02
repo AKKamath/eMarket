@@ -17,7 +17,7 @@
 
 <div id="rightbar"> 
 <p id="heading"><span id = "Submit">College</span></p>
-    <fieldset>
+        <p>
     
             
             <a class="ghost-button" style="border:0px; text-align: left;" href="/store.php?college=0">All</a><br>
@@ -26,8 +26,8 @@
             <a class="ghost-button" style="border:0px; text-align: left;" href="/store.php?college=12">BITS Pilani</a><br>
             <a class="ghost-button" style="border:0px; text-align: left;" href="/store.php?college=78">NIT Jaipur</a><br>
             <a class="ghost-button" style="border:0px; text-align: left;" href="/store.php?college=18">DTU New Delhi</a><br>
+        </p>
     
-    </fieldset>
     <p id="heading"><span id = "Submit">Options</span></p>
     <p>
     <?php if(!empty($_SESSION["id"])): ?>
