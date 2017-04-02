@@ -116,9 +116,7 @@ $(document).ready(function(){
    });
    
    $.validate({
-       form:'#RegisterF, #LoginF ,#postF',
-        // modules : 'toggleDisabled',
-        // diabledFormFilter : '#postF, #LoginF, #RegisterF'
+       form:'#RegisterF, #LoginF ,#postF'
    });
    
    $("button#myitems_button").click(function(){
