@@ -1,8 +1,8 @@
-<span id="link"><a class ="ghost-button" href='/store.php'>Purchase</a></span>
+</div><div id="main"><span id="link"><a class ="ghost-button" href='/store.php'>Purchase</a></span>
 <span id="link"><a class ="ghost-button" href='/postad.php'>Sell </a></span><br><br><br>
 <span id="link"><button class ="ghost-button" id="myitems_button">My Items </button></span>
 <span id="link"><a class ="ghost-button" href='/logout.php'>Logout </a></span></p>
-
+</div>
 <?php if(!empty($data)): ?>
     <form method=POST action='/'>
         
@@ -37,4 +37,3 @@
 </p>
 
 <!--<p id="link" align="right"><a id="direct" class="ghost-button" style="border:0px" href='/logout.php'>Logout</a></p>-->
-</div>

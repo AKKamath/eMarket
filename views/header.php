@@ -30,7 +30,7 @@
     <div class="container">
         <div id="top">
 
-            <div><h1>SELLR.</h1></div>
+            <div id="title_main"><h1>SELLR.</h1></div>
 
             
             <?php if(!empty($_SESSION["id"])): ?>
