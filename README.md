@@ -11,14 +11,14 @@ Important Files:
 [Sales](/models/Sales.SQL) - Contains SQL for Sales table  
 
 Front End Progress:
-- [ ] [Header](/views/header.php)
-- [ ] [Main](/views/v_intro.html)
-- [ ] [Welcome](/views/v_welcome.php)
-- [ ] [Registration](/views/v_register.html)
-- [ ] [Login](/views/v_login.html)
-- [ ] [Store](/views/v_store.php)
-- [ ] [Post Ad](/views/v_postad.html)
-- [ ] [Display Item](/views/v_item.php)
+- [X] [Header](/views/header.php)
+- [X] [Main](/views/v_intro.html)
+- [X] [Welcome](/views/v_welcome.php)
+- [X] [Registration](/views/v_register.html)
+- [X] [Login](/views/v_login.html)
+- [X] [Store](/views/v_store.php)
+- [X] [Post Ad](/views/v_postad.html)
+- [x] [Display Item](/views/v_item.php)
 
 Back End Progress:
 - [X] Main
