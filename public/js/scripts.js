@@ -96,7 +96,7 @@ $(document).ready(function(){
    });
      var blank= $(".tbl-content").html();
     //  console.log(blank.length);
-   if(blank.length==13)
+   if(blank && blank.length==13)
    {
        console.log("Hi");
        $(".tbl-content").html('<tr id="table_row"><td style="text-align:center; font-family:sans-serif" colspan="4">Nothing for sale</td></tr>');
