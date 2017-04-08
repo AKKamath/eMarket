@@ -12,6 +12,8 @@ $(document).ready(function(){
         // console.log($target.parent().parent());
         var $target= $target1.parent();
         
+        $.ajaxSetup({async:false});
+        
         if( $target.parent().find(".hidden").attr("vis")==1){
             $target.parent().find(".hidden").find("p").slideUp();
              $target.parent().find(".hidden").css("visibility","collapse");
@@ -23,7 +25,8 @@ $(document).ready(function(){
             
             var url = $target.parent().find(".hidden").find("a.cont").attr("href");
              console.log(url);
-            // var x;
+            
+            
             if(undefined!==url){
             $.get(url,function(data){
                 // x=data;
@@ -32,7 +35,7 @@ $(document).ready(function(){
                 {
                      $target.parent().find(".hidden").find("p").html('<img alt="Loading" src="/img/ajax-loader.gif"/>');
                 }
-            var v =$(data).find("#description").text();
+             var v =$(data).find("#description").text();
             var contact= $(data).find("#contact").text();
             // console.log(v);
             var items= $(data).find("#link").attr("href");
@@ -43,7 +46,7 @@ $(document).ready(function(){
                          +'</p><p>'+date+'</p><a href="'
                          +url
                         +'">Contact Seller</a>'
-                        +'<p>'+contact+'</p>'
+                        +'<p>'+contact+'</p><br>'
                         +'<a href="'+items+'">More from this seller</a>'
                         +'</span></div>';
             
@@ -52,17 +55,20 @@ $(document).ready(function(){
             // $target.parent().find(".hidden").attr("colspan",2);
             $target.parent().find(".hidden").find("p").html('<b>Description:</b><br><span style="font-family:courier">'+v+'</span>');
             $target.parent().find(".hidden").find("p").append(more);
-            
+           
             });
-            }
             
+            }
             $target.parent().find("#details").hide();
            
-            $target.parent().find(".hidden").find("p").slideToggle();
+            
             $target.parent().find(".hidden").css("visibility","visible");
             $target.parent().find(".hidden").show();
             $target.parent().find(".hidden").attr("vis",1);
-           
+            $target.parent().find(".hidden").find("p").slideToggle();
+            
+              
+            
         }
     });
     
