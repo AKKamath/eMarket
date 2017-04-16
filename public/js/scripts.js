@@ -2,7 +2,7 @@
  *
  *  Features:
  *
- * 1)Donated items become green on hover while items for money become red
+ * 1)Donated items become white on hover while items for money become dark
  * 2)I obtain description of item from other page by ajax request
  * 3)If nothing is for sale in a particular category i change it by javascript
  * 4)There may be some misnamed variables
@@ -113,12 +113,12 @@ $(document).ready(function() {
 
     $("tr#table_row").hover(function() {
         if ($(this).find("#price").text() === "On Donation") {
-            $(this).css("background-color", "rgba(0,255,0,0.7)");
+            $(this).css("background-color", "rgba(255,255,255,0.7)");
         } else {
-            $(this).css("background-color", "rgba(255,0,0,0.7)");
+            $(this).css("background-color", "rgba(169,169,169,0.7)");
         }
     }, function() {
-        $(this).css("background-color", "rgba(169,169,169,0.3)");
+        $(this).css("background-color", "rgba(100,100,100,0.3)");
     });
 
     $.validate({
